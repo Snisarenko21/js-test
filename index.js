@@ -4,13 +4,38 @@ function makeSizer(size) {
   };
 }
 
-var size12 = makeSizer(12);
-var size14 = makeSizer(14);
-var size16 = makeSizer(16);
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
 
 document.getElementById("size-12").onclick = size12;
 document.getElementById("size-14").onclick = size14;
 document.getElementById("size-16").onclick = size16;
+
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
+
+function makeHelpCallback(help) {
+  return function () {
+    showHelp(help);
+  };
+}
+
+function setupHelp() {
+  const helpText = [
+    { id: "email", help: "Ваш адрес e-mail" },
+    { id: "name", help: "Ваше полное имя" },
+    { id: "age", help: "Ваш возраст (Вам должно быть больше 16)" },
+  ];
+
+  for (let i = 0; i < helpText.length; i++) {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+  }
+}
+
+setupHelp();
 
 // Замыкание (англ. closure) в программировании
 // — функция первого класса, в теле которой присутствуют
@@ -26,7 +51,7 @@ document.getElementById("size-16").onclick = size16;
 //   (лексическое окружение) с функцией, которая работает с этими
 // данными.Очевидна параллель с объектно - ориентированным программированием,
 //   где объекты позволяют нам связать некоторые данные(свойства объекта)
-//   с одним или несколькими методами.
+//   с одним или несколькими методами (изоляция и инкапсуляция).
 
 //   Следовательно, замыкания можно использовать везде,
 //     где вы обычно использовали объект с одним единственным методом.
