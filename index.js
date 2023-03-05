@@ -16,6 +16,11 @@ function showHelp(help) {
   document.getElementById("help").innerHTML = help;
 }
 
+// фабричная функция (function factory)
+// Вместо того, чтобы делить на всех одно окружение,
+//   функция makeHelpCallback создаёт каждому из замыканий
+//   своё собственное, в котором переменная item указывает
+//   на правильный элемент массива helpText.
 function makeHelpCallback(help) {
   return function () {
     showHelp(help);

@@ -5,31 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
   </head>
   <body>
     <!--closure 1 -->
-    <p>Some paragraph text</p>
+    <!-- <p>Some paragraph text</p>
     <h1>some heading 1 text</h1>
     <h2>some heading 2 text</h2>
 
     <a href="#" id="size-12">12</a>
     <a href="#" id="size-14">14</a>
-    <a href="#" id="size-16">16</a>
+    <a href="#" id="size-16">16</a> -->
 
-    <!--closure 1 -->
-    <p id="help">Helpful notes will appear here</p>
+    <!--closure 2 -->
+    <!-- <p id="help">Helpful notes will appear here</p>
     <p>E-mail: <input type="text" id="email" name="email" /></p>
     <p>Name: <input type="text" id="name" name="name" /></p>
-    <p>Age: <input type="text" id="age" name="age" /></p>
+    <p>Age: <input type="text" id="age" name="age" /></p> -->
 
-    <script src="./index.js" type="module"></script>
+    <!-- DOM -->
+    <!-- <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+      <li>Fourth item</li>
+      <li>Fifth item</li>
+    </ul> -->
+
+    <!-- <p id="paragraph" class="text red big">
+      Proin magna. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam
+      libero, non adipiscing dolor urna a orci. Etiam rhoncus. Donec mi odio,
+      faucibus at, scelerisque quis, convallis in, nisi.
+    </p> -->
+    <div class="editor">
+      <p>
+        Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu
+        nisl dignissim dolor, a pretium mi sem ut ipsum. Curabitur suscipit
+        suscipit tellus. Phasellus gravida semper nisi.
+      </p>
+      <div class="actions">
+        <button type="button" class="btn" data-action="save">Save</button>
+        <button type="button" class="btn" data-action="close">Close</button>
+      </div>
+    </div>
+
+    <ul class="dishes">
+      <li data-id="14">Baked Yak &amp; Mushrooms</li>
+      <li data-id="7">Strawberry Pancakes</li>
+      <li data-id="3">Caramel Toffee</li>
+      <li data-id="61">Pistachio Elderberry Wafer</li>
+    </ul>
+    <!-- <script src="./index.js" type="module"></script> -->
+    <script src="./dom.js" type="module"></script>
   </body>
 </html>
