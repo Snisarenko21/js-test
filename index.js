@@ -31,49 +31,49 @@ promise.then(
 // Will run second
 console.log("After promise.then()");
 
-// function makeSizer(size) {
-//   return function () {
-//     document.body.style.fontSize = size + "px";
-//   };
-// }
+function makeSizer(size) {
+  return function () {
+    document.body.style.fontSize = size + "px";
+  };
+}
 
-// const size12 = makeSizer(12);
-// const size14 = makeSizer(14);
-// const size16 = makeSizer(16);
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
 
-// document.getElementById("size-12").onclick = size12;
-// document.getElementById("size-14").onclick = size14;
-// document.getElementById("size-16").onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 
-// function showHelp(help) {
-//   document.getElementById("help").innerHTML = help;
-// }
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
 
 // фабричная функция (function factory)
 // Вместо того, чтобы делить на всех одно окружение,
 //   функция makeHelpCallback создаёт каждому из замыканий
 //   своё собственное, в котором переменная item указывает
 //   на правильный элемент массива helpText.
-// function makeHelpCallback(help) {
-//   return function () {
-//     showHelp(help);
-//   };
-// }
+function makeHelpCallback(help) {
+  return function () {
+    showHelp(help);
+  };
+}
 
-// function setupHelp() {
-//   const helpText = [
-//     { id: "email", help: "Ваш адрес e-mail" },
-//     { id: "name", help: "Ваше полное имя" },
-//     { id: "age", help: "Ваш возраст (Вам должно быть больше 16)" },
-//   ];
+function setupHelp() {
+  const helpText = [
+    { id: "email", help: "Ваш адрес e-mail" },
+    { id: "name", help: "Ваше полное имя" },
+    { id: "age", help: "Ваш возраст (Вам должно быть больше 16)" },
+  ];
 
-//   for (let i = 0; i < helpText.length; i++) {
-//     const item = helpText[i];
-//     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
-//   }
-// }
+  for (let i = 0; i < helpText.length; i++) {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+  }
+}
 
-// setupHelp();
+setupHelp();
 
 // Замыкание (англ. closure) в программировании
 // — функция первого класса, в теле которой присутствуют
@@ -94,55 +94,57 @@ console.log("After promise.then()");
 //   Следовательно, замыкания можно использовать везде,
 //     где вы обычно использовали объект с одним единственным методом.
 
-// let clientCounter = 18;
-// const maxClients = 25;
+let clientCounter = 18;
+const maxClients = 25;
 
-// while (clientCounter < maxClients) {
-//   console.log(clientCounter);
-//   clientCounter += 1;
-// }
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
 
-// let password = "";
+let password = "";
 
-// do {
-//   password = prompt("Введите пароль длиннее 4-х символов", "");
-// } while (password.length < 5);
+do {
+  password = prompt("Введите пароль длиннее 4-х символов", "");
+} while (password.length < 5);
 
-// console.log("Ввели пароль: ", password);
+console.log("Ввели пароль: ", password);
 
-// const target = 7;
-// let sum = 0;
+const target = 7;
+let sum = 0;
 
-// for (let i = 0; i <= target; i += 1) {
-//   sum += i;
-// }
+for (let i = 0; i <= target; i += 1) {
+  sum += i;
+}
 
-// console.log(sum);
+console.log(sum);
 
-// const max = 10;
-// for (let i = 0; i < max; i += 1) {
-//   console.log(`${max} % ${i} = `, max % i);
-// }
+const max = 10;
+for (let i = 0; i < max; i += 1) {
+  console.log(`${max} % ${i} = `, max % i);
+}
 
 // Выносим варианты в массив
-// const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
-// const fruit = "cherry";
+const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
+const fruit = "cherry";
 // // Проверяем наличие элемента
-// const hasFruit = redFruits.includes(fruit);
+const hasFruit = redFruits.includes(fruit);
 
-// if (hasFruit) {
-//   console.log(`${fruit} is a red fruit!`);
-// }
+if (hasFruit) {
+  console.log(`${fruit} is a red fruit!`);
+}
 
-// for (let i = 0; i < 5; i++) {
-//   const a = 20;
-//   console.log(a); // 20
+for (let i = 0; i < 5; i++) {
+  const a = 20;
+  console.log(a); // 20
 
-//   if (i === 2) {
-//     const b = 30;
-//     console.log(a); // 20
-//     console.log(b); // 30
-//   }
+  if (i === 2) {
+    const b = 30;
+    console.log(a); // 20
+    console.log(b); // 30
+  }
 
-// if (i === 3) {
-//   console.log(a); // 20
+  if (i === 3) {
+    console.log(a); // 20
+  }
+}
